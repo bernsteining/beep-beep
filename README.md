@@ -1,6 +1,30 @@
+![](beep_beep.png)
+
 # beep-beep
 
-A list of tools to accelerate your workflow on a linux distro, favoring tools that run in TUI / CLI in order to run anything in a tmux pane, and to save RAM.
+A list of tools to accelerate your workflow on a linux distro, with a focus on:
+
+- ease of installation
+- TUI / CLI
+- RAM consumption
+
+Table of contents:
+
+1. [search & select & sort things](#search-&-select-&-sort-things)
+1. [windows manager & status bar & app launcher](#windows)
+1. [terminal emulator](#terminal-emulator)
+1. [terminal customization](#terminal-customization)
+1. [terminal multiplexing](terminal-multiplexing)
+1. [type faster & spell checking](#type-faster-&-spell-checking)
+1. [pagers](#pagers)
+1. [JSON everything](#JSON-everything)
+1. [markdown everything](#markdown-everything)
+1. [CLI IDE](#cli-ide)
+1. [password management](#password-management)
+1. [listen music](#listen-music)
+1. [screenshots & images workflow](#screenshots--images-workflow)
+1. [code related](#code-related)
+1. [manage your screen monitors](#manage-your-screen-monitors)
 
 ## search & select & sort things
 
@@ -48,13 +72,15 @@ function cwp() {feh --bg-scale --fullscreen $(rg --files ~/images/wallpapers/ | 
 
 [ptf](https://gitea.tfnux.org/adraenwan/ptf): share a file instantly over HTTP.
 
-## windows manager & a bar
+## windows manager & status bar & app launcher
 
 ______________________________________________________________________
 
 [Choose a windows manager that fits your needs](https://en.wikipedia.org/wiki/Comparison_of_X_window_managers)
 
 Choose a status bar that fits your needs, [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status) for example.
+
+[rofi](https://github.com/davatorium/rofi): fuzzy-find and launch your programs.
 
 ## terminal emulator
 
@@ -75,7 +101,13 @@ plugins=(git zsh-completions zsh-syntax-highlighting zsh-autosuggestions
         colored-man-pages extract tmux ssh-agent)
 ```
 
-## type faster
+## terminal multiplexing
+
+______________________________________________________________________
+
+[screen](https://wiki.archlinux.org/title/GNU_Screen) or [tmux](https://github.com/tmux/tmux): keep a terminal session active in background, easily switch between your sessions, name them.
+
+## type faster & spell checking
 
 ______________________________________________________________________
 
@@ -84,11 +116,7 @@ ______________________________________________________________________
 learn the shortcuts:
 ![](hotkeys.png)
 
-## terminal multiplexing
-
-______________________________________________________________________
-
-[screen](https://wiki.archlinux.org/title/GNU_Screen) or [tmux](https://github.com/tmux/tmux): keep a terminal session active in background, easily switch between your sessions, name them.
+[aspell](http://aspell.net/): spell check from your CLI
 
 ## pagers
 
@@ -98,7 +126,7 @@ ______________________________________________________________________
 
 [glow](https://github.com/charmbracelet/glow): read markdown in your terminal.
 
-## JSON tools
+## JSON everything
 
 ______________________________________________________________________
 
@@ -110,12 +138,6 @@ ______________________________________________________________________
 
 [gron](https://github.com/tomnomnom/gron): easily find the `jq` select syntax you're looking for.
 
-## app launcher
-
-______________________________________________________________________
-
-[rofi](https://github.com/davatorium/rofi): fuzzy-find and launch your programs.
-
 ## markdown everything
 
 ______________________________________________________________________
@@ -126,19 +148,33 @@ ______________________________________________________________________
 
 [mdformat](https://github.com/executablebooks/mdformat): format your markdown.
 
-## learn to use vim or emacs
+## CLI IDE
 
 ______________________________________________________________________
 
-Knowing how to use vim or emacs
+learn how to use nvim or emacs
 
 add modules like [easymotion](https://github.com/easymotion/vim-easymotion)
+
+## password management
+
+______________________________________________________________________
+
+[pass](https://www.passwordstore.org/): manage your password the UNIX way with gpg.
+
+[rofi-pass](https://github.com/carnager/rofi-pass): fuzzy find your passwords and get them to your clipboard quickly.
 
 ## listen music
 
 ______________________________________________________________________
 
 [spotifyd](https://github.com/Spotifyd/spotifyd): spotify deamon.
+
+```
+# configure `spotifyd` to auth itself seamlessly with your `pass` password manager.
+# ~/.config/spotifyd/spotifyd.conf
+password_cmd = "pass show Web/spotifyd | head -n 1"
+```
 
 [spotify-tui](https://github.com/Rigellute/spotify-tui): spotify TUI client.
 
@@ -154,35 +190,28 @@ ______________________________________________________________________
 
 [imagemagick](https://github.com/ImageMagick/ImageMagick): edit your pictures from the CLI.
 
-## password management
-
-______________________________________________________________________
-
-[pass](https://www.passwordstore.org/): manage your password the UNIX way with gpg.
-
-[rofi-pass](https://github.com/carnager/rofi-pass): fuzzy find your passwords and get them to your clipboard quickly.
-
 ## code related
 
 ______________________________________________________________________
 
 [onefetch](https://github.com/o2sh/onefetch): quickly get stats & info about a `.git`.
+
 [lazygit](https://github.com/jesseduffield/lazygit): TUI for `git`.
 
-## manage multiple git identities
-
-______________________________________________________________________
+[asdf](https://github.com/asdf-vm/asdf): manage multiple runtimes versions with one tool.
 
 Never mix your git identities anymore
 
 ```
-includeif.gitdir:~/perso/.path=.gitconfig-personal
-includeif.gitdir:~/work/.path=.gitconfig-professional
+# ~/.gitconfig
+[includeIf "gitdir:~/documents/prog/perso/"]
+	path = .gitconfig-personal
+[includeIf "gitdir:~/documents/prog/work/"]
+  	path = .gitconfig-professional
 ```
 
-with a .gitconfig:
-
 ```
+# ~/.gitconfig-personal
 [user]
 	email = your_email
 	name = your_identity
@@ -190,8 +219,10 @@ with a .gitconfig:
 	editor = vim
 ```
 
-Projects under perso/ will commit with your personal identity
-Projects under work/ will commit with your professional identity
+code projects under:
+
+- perso/\* will be committed with your `.gitconfig-personal` identity
+- work/\* will be committed with your `.gitconfig-professional` identity
 
 ## manage your screen monitors
 
