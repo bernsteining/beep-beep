@@ -14,7 +14,8 @@ Table of contents:
 1. [windows manager & status bar & app launcher](#windows)
 1. [terminal emulator](#terminal-emulator)
 1. [terminal customization](#terminal-customization)
-1. [terminal multiplexing](terminal-multiplexing)
+1. [terminal multiplexing](#terminal-multiplexing)
+1. [network](#network)
 1. [type faster & spell checking](#type-faster-&-spell-checking)
 1. [pagers](#pagers)
 1. [JSON everything](#JSON-everything)
@@ -25,6 +26,7 @@ Table of contents:
 1. [screenshots & images workflow](#screenshots--images-workflow)
 1. [code related](#code-related)
 1. [manage your screen monitors](#manage-your-screen-monitors)
+1. [get documentation](#get-documentation)
 
 ## search & select & sort things
 
@@ -59,6 +61,10 @@ function cwp() {feh --bg-scale --fullscreen $(rg --files ~/images/wallpapers/ | 
 [fd](https://github.com/sharkdp/fd): find directories & files.
 
 [zoxide](https://github.com/ajeetdsouza/zoxide): `cd` with teleportation.
+
+[procs](https://github.com/dalance/procs): `ps` with additional features.
+
+[bottom](https://github.com/ClementTsang/bottom): `htop`-like for CPU, RAM, network with additional.
 
 [huniq](https://github.com/koraa/huniq): sort things uniquely.
 
@@ -107,6 +113,14 @@ ______________________________________________________________________
 
 [screen](https://wiki.archlinux.org/title/GNU_Screen) or [tmux](https://github.com/tmux/tmux): keep a terminal session active in background, easily switch between your sessions, name them.
 
+## network
+
+[nmtui](https://developer-old.gnome.org/NetworkManager/stable/nmtui.html): network manager TUI.
+
+[nload](https://linux.die.net/man/1/nload) & [bandwhich](https://github.com/imsnif/bandwhich): monitor bandwidth usage.
+
+[rofi-bluetooth](https://github.com/nickclyde/rofi-bluetooth): manage & fuzzy-find bluetooth devices.
+
 ## type faster & spell checking
 
 ______________________________________________________________________
@@ -116,7 +130,7 @@ ______________________________________________________________________
 learn the shortcuts:
 ![](hotkeys.png)
 
-[aspell](http://aspell.net/): spell check from your CLI
+[aspell](http://aspell.net/): spell check CLI.
 
 ## pagers
 
@@ -194,11 +208,13 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-[onefetch](https://github.com/o2sh/onefetch): quickly get stats & info about a `.git`.
+[onefetch](https://github.com/o2sh/onefetch) & [tokei](https://github.com/XAMPPRocky/tokei): quickly get stats & info about a `.git` repo.
 
 [lazygit](https://github.com/jesseduffield/lazygit): TUI for `git`.
 
 [asdf](https://github.com/asdf-vm/asdf): manage multiple runtimes versions with one tool.
+
+[hyperfine](https://github.com/sharkdp/hyperfine): benchmark any program.
 
 Never mix your git identities anymore
 
@@ -230,6 +246,10 @@ ______________________________________________________________________
 
 - [xrandr](https://wiki.archlinux.org/title/xrandr) (CLI)
 - [arandr](https://github.com/chrysn/arandr) (GUI)
+
+## get documentation
+
+[tealdeer](https://github.com/dbrgn/tealdeer) & [cheat.sh](http://cheat.sh/): common use cases of tools usage instead of exhaustive man pages.
 
 ### todo
 
