@@ -11,6 +11,7 @@ A list of tools to accelerate your workflow on a linux distro, with a focus on:
 Table of contents:
 
 1. [search & select & sort things](#search-&-select-&-sort-things)
+1. [navigate](#navigate)
 1. [windows manager & status bar & app launcher](#windows)
 1. [terminal emulator](#terminal-emulator)
 1. [terminal customization](#terminal-customization)
@@ -60,13 +61,13 @@ function cwp() {feh --bg-scale --fullscreen $(rg --files ~/images/wallpapers/ | 
 
 [fd](https://github.com/sharkdp/fd): find directories & files.
 
-[zoxide](https://github.com/ajeetdsouza/zoxide): `cd` with teleportation.
-
 [procs](https://github.com/dalance/procs): `ps` with additional features.
 
 [bottom](https://github.com/ClementTsang/bottom): `htop`-like for CPU, RAM, network with additional.
 
 [huniq](https://github.com/koraa/huniq): sort things uniquely.
+
+[delta](https://github.com/dandavison/delta): perfect files diffs.
 
 [dust](https://github.com/bootandy/dust): check disk usage.
 
@@ -77,6 +78,18 @@ function cwp() {feh --bg-scale --fullscreen $(rg --files ~/images/wallpapers/ | 
 [xsel](https://github.com/kfish/xsel): pipe in your clipboard with `xsel -bi`.
 
 [ptf](https://gitea.tfnux.org/adraenwan/ptf): share a file instantly over HTTP.
+
+## navigate
+
+[zoxide](https://github.com/ajeetdsouza/zoxide): `cd` with teleportation.
+
+[broot](https://github.com/Canop/broot): navigate, get overviews of directories & never lose track of file hierarchy.
+
+[vimfm](https://github.com/vifm/vifm): file manager with `vim` bindings.
+
+[ranger](https://github.com/ranger/ranger): same as above.
+
+[hunter](https://github.com/rabite0/hunter): not maintained anymore but still powerful.
 
 ## windows manager & status bar & app launcher
 
@@ -111,11 +124,13 @@ plugins=(git zsh-completions zsh-syntax-highlighting zsh-autosuggestions
 
 ______________________________________________________________________
 
-[screen](https://wiki.archlinux.org/title/GNU_Screen) or [tmux](https://github.com/tmux/tmux): keep a terminal session active in background, easily switch between your sessions, name them.
+[screen](https://wiki.archlinux.org/title/GNU_Screen) / [tmux](https://github.com/tmux/tmux) / [zellij](https://github.com/zellij-org/zellij)  / [byobu](https://www.byobu.org/): keep a terminal session active in background, easily switch between your sessions, name them.
 
 ## network
 
 [nmtui](https://developer-old.gnome.org/NetworkManager/stable/nmtui.html): network manager TUI.
+
+[termshark](https://github.com/gcla/termshark): Wireshark but in TUI.
 
 [nload](https://linux.die.net/man/1/nload) & [bandwhich](https://github.com/imsnif/bandwhich): monitor bandwidth usage.
 
@@ -210,11 +225,17 @@ ______________________________________________________________________
 
 [onefetch](https://github.com/o2sh/onefetch) & [tokei](https://github.com/XAMPPRocky/tokei): quickly get stats & info about a `.git` repo.
 
-[lazygit](https://github.com/jesseduffield/lazygit): TUI for `git`.
+[gitui](https://github.com/extrawurst/gitui) & [lazygit](https://github.com/jesseduffield/lazygit): TUI for `git`.
 
 [asdf](https://github.com/asdf-vm/asdf): manage multiple runtimes versions with one tool.
 
 [hyperfine](https://github.com/sharkdp/hyperfine): benchmark any program.
+
+[watchexec](https://github.com/watchexec/watchexec): watches a path and runs a command whenever it detects modifications.
+
+[just](https://github.com/casey/just): better make.
+
+[shellcheck](https://github.com/koalaman/shellcheck): warning & suggestions for shell scripts.
 
 Never mix your git identities anymore
 
@@ -249,10 +270,13 @@ ______________________________________________________________________
 
 ## get documentation
 
-[tealdeer](https://github.com/dbrgn/tealdeer) & [cheat.sh](http://cheat.sh/): common use cases of tools usage instead of exhaustive man pages.
+[tealdeer](https://github.com/dbrgn/tealdeer) & [navi](https://github.com/denisidoro/navi): common use cases of tools / cheatsheets instead of exhaustive man pages.
+
+# more utils
+
+[moreutils](https://joeyh.name/code/moreutils/)
 
 ### todo
 
-- add nvim modules
-- emacs tips
+- add nvim modules & conf tips & emacs tips
 - epub / pdf readers
