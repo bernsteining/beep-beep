@@ -61,6 +61,8 @@ function cwp() {feh --bg-scale --fullscreen $(rg --files ~/images/wallpapers/ | 
 
 [fd](https://github.com/sharkdp/fd): find directories & files.
 
+[dragon](https://github.com/mwh/dragon): drag & drop files to other apps from the term.
+
 [procs](https://github.com/dalance/procs): `ps` with additional features.
 
 [bottom](https://github.com/ClementTsang/bottom): `htop`-like for CPU, RAM, network with additional.
