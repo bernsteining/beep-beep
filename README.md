@@ -145,7 +145,8 @@ ______________________________________________________________________
 [typing club](https://www.typingclub.com/): learn touch typing
 
 learn the shortcuts:
-![](hotkeys.png)
+![](hotkeys.png#gh-light-mode-only)
+![](white_hotkeys.png#gh-dark-mode-only)
 
 [aspell](http://aspell.net/): spell check CLI.
 
