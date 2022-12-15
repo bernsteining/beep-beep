@@ -10,16 +10,16 @@ A list of tools to accelerate your workflow on a linux distro, with a focus on:
 
 Table of contents:
 
-1. [search & select & sort things](#search-&-select-&-sort-things)
+1. [search & select & sort things](#search--select--sort-things)
 1. [navigate](#navigate)
-1. [windows manager & status bar & app launcher](#windows)
+1. [windows manager & status bar & app launcher](#windows-manager--status-bar--app-launcher)
 1. [terminal emulator](#terminal-emulator)
 1. [terminal customization](#terminal-customization)
 1. [terminal multiplexing](#terminal-multiplexing)
 1. [network](#network)
-1. [type faster & spell checking](#type-faster-&-spell-checking)
+1. [type faster & spell checking](#type-faster--spell-checking)
 1. [pagers](#pagers)
-1. [JSON everything](#JSON-everything)
+1. [json everything](#json-everything)
 1. [markdown everything](#markdown-everything)
 1. [CLI IDE](#cli-ide)
 1. [password management](#password-management)
@@ -158,7 +158,7 @@ ______________________________________________________________________
 
 [glow](https://github.com/charmbracelet/glow): read markdown in your terminal.
 
-## JSON everything
+## json everything
 
 ______________________________________________________________________
 
@@ -169,6 +169,8 @@ ______________________________________________________________________
 [fq](https://github.com/wader/fq): parse binary formats.
 
 [gron](https://github.com/tomnomnom/gron): easily find the `jq` select syntax you're looking for.
+
+[fx](https://github.com/antonmedv/fx): interactive `.json` traversal & finder.
 
 ## markdown everything
 
