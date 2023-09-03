@@ -1,4 +1,4 @@
-![](beep_beep.png)
+![](beep_beep.svg)
 
 # beep-beep
 
