@@ -25,6 +25,7 @@ Table of contents:
 1. [password management](#password-management)
 1. [listen music](#listen-music)
 1. [screenshots & images workflow](#screenshots--images-workflow)
+1. [pdf reading & editing](#pdf-reading--editing)
 1. [code related](#code-related)
 1. [manage your screen monitors](#manage-your-screen-monitors)
 1. [get documentation](#get-documentation)
@@ -35,7 +36,9 @@ ______________________________________________________________________
 
 [fzf](https://github.com/junegunn/fzf): fuzzy-find in everything, especially your command history.
 
-### Examples:
+(Make sure to install it via `git` to activate keybindings automagically)
+
+### Examples (.zsh functions):
 
 ______________________________________________________________________
 
@@ -55,6 +58,24 @@ fuzzy select an image while previewing it in the terminal and set it as your wal
 
 ```sh
 function cwp() {feh --bg-scale --fullscreen $(rg --files ~/images/wallpapers/ | fzf --preview "termpix --width 100 --true-color {}")}
+```
+
+fuzzy select a password from your password vault and put it in your clipboard.
+
+```sh
+function fp() {
+   pass show -c $(fd -i --base-directory ~/.password-store .gpg \
+                      | fzf --prompt="# " \
+                            --ansi \
+                            --delimiter "/" \
+                            --no-multi \
+                            --cycle \
+                            --header='fuzzy_pass' \
+                            --color='16,gutter:-1' \
+                            --bind='tab:down' \
+                            --bind='btab:up' | rev | cut -c5- | rev)
+}
+
 ```
 
 [ripgrep](https://github.com/BurntSushi/ripgrep): find patterns in files.
@@ -99,7 +120,7 @@ ______________________________________________________________________
 
 [Choose a windows manager that fits your needs](https://en.wikipedia.org/wiki/Comparison_of_X_window_managers)
 
-Choose a status bar that fits your needs, [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status) for example.
+[Choose a status bar that fits your needs](https://github.com/kimond/awesome-statusbars)
 
 [rofi](https://github.com/davatorium/rofi): fuzzy-find and launch your programs.
 
@@ -107,7 +128,22 @@ Choose a status bar that fits your needs, [bumblebee-status](https://github.com/
 
 ______________________________________________________________________
 
-[choose a terminal emulator that fits your needs](https://en.wikipedia.org/wiki/List_of_terminal_emulators)
+Choose a terminal emulator that fits your needs:
+
+- do you need to have it GPU accelerated?
+- do you want a fast startup time?
+- do you care about latency?
+- do you want it to have a sessions feature?
+- do you need kitty's graphics protocol?
+- \[...\]
+
+Here is:
+
+- the wikipedia's [list of emulators](https://en.wikipedia.org/wiki/List_of_terminal_emulators)
+- a [benchmark](https://github.com/anarcat/terms-benchmarks)
+- some [documentation](https://lwn.net/Articles/751763/)
+
+for choosing the right one (urxvt-unicode with daemon mode ;)).
 
 ## terminal customization
 
@@ -118,17 +154,21 @@ use [zsh](https://ohmyz.sh/) + [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 add plugins in your `.zshrc`, for example:
 
 ```
-plugins=(git zsh-completions zsh-syntax-highlighting zsh-autosuggestions
-        colored-man-pages extract tmux ssh-agent)
+plugins=(git zsh-completions zsh-autosuggestions colored-man-pages extract ssh-agent gpg-agent tmux)
 ```
 
 ## terminal multiplexing
 
 ______________________________________________________________________
 
-[screen](https://wiki.archlinux.org/title/GNU_Screen) / [tmux](https://github.com/tmux/tmux) / [zellij](https://github.com/zellij-org/zellij)  / [byobu](https://www.byobu.org/): keep a terminal session active in background, easily switch between your sessions, name them.
+- [tmux](https://github.com/tmux/tmux)
+- [screen](https://wiki.archlinux.org/title/GNU_Screen)
+- [zellij](https://github.com/zellij-org/zellij)
+- [byobu](https://www.byobu.org/): keep a terminal session active in background, easily switch between your sessions, name them.
 
 ## network
+
+[iwd](https://wiki.archlinux.org/title/iwd):  wireless daemon for Linux, lets you manage wifi from the cli.
 
 [nmtui](https://developer-old.gnome.org/NetworkManager/stable/nmtui.html): network manager TUI.
 
@@ -224,6 +264,12 @@ ______________________________________________________________________
 
 [imagemagick](https://github.com/ImageMagick/ImageMagick): edit your pictures from the CLI.
 
+## pdf reading & editing
+
+[apvlv](https://github.com/naihe2010/apvlv): pdf reader with vim bindings.
+
+[xournalpp](https://github.com/xournalpp/xournalpp): note taking & pdf editor you're looking for.
+
 ## code related
 
 ______________________________________________________________________
@@ -232,7 +278,7 @@ ______________________________________________________________________
 
 [gitui](https://github.com/extrawurst/gitui) & [lazygit](https://github.com/jesseduffield/lazygit): TUI for `git`.
 
-[asdf](https://github.com/asdf-vm/asdf): manage multiple runtimes versions with one tool.
+[rtx](https://github.com/jdx/rtx) & [asdf](https://github.com/asdf-vm/asdf): manage multiple runtimes versions with one tool.
 
 [hyperfine](https://github.com/sharkdp/hyperfine): benchmark any program.
 
@@ -241,6 +287,8 @@ ______________________________________________________________________
 [just](https://github.com/casey/just): better make.
 
 [shellcheck](https://github.com/koalaman/shellcheck): warning & suggestions for shell scripts.
+
+[ruff](https://github.com/astral-sh/ruff): fastest python linter & code formatter.
 
 Never mix your git identities anymore
 
@@ -277,11 +325,10 @@ ______________________________________________________________________
 
 [tealdeer](https://github.com/dbrgn/tealdeer) & [navi](https://github.com/denisidoro/navi): common use cases of tools / cheatsheets instead of exhaustive man pages.
 
-# more utils
+## more utils
 
 [moreutils](https://joeyh.name/code/moreutils/)
 
-### todo
+# conclusion
 
-- add nvim modules & conf tips & emacs tips
-- epub / pdf readers
+Now that you know which tools to use, it's time to move to a [lightweight distro](https://en.wikipedia.org/wiki/Light-weight_Linux_distribution) that only ships what you really need, with the [init system](https://wiki.gentoo.org/wiki/Comparison_of_init_systems) you want.
