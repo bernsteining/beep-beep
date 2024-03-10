@@ -252,6 +252,8 @@ password_cmd = "pass show Web/spotifyd | head -n 1"
 
 [spotify-tui](https://github.com/Rigellute/spotify-tui): spotify TUI client.
 
+[playerctl](https://github.com/altdesktop/playerctl): control spotify, mpv, vlc [...] with keybindings from anywhere seamlessly.
+
 ## screenshots & images workflow
 
 ______________________________________________________________________
