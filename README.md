@@ -280,7 +280,7 @@ ______________________________________________________________________
 
 [gitui](https://github.com/extrawurst/gitui) & [lazygit](https://github.com/jesseduffield/lazygit): TUI for `git`.
 
-[rtx](https://github.com/jdx/rtx) & [asdf](https://github.com/asdf-vm/asdf): manage multiple runtimes versions with one tool.
+[mise](https://github.com/jdx/mise) & [asdf](https://github.com/asdf-vm/asdf): manage multiple runtimes versions with one tool.
 
 [hyperfine](https://github.com/sharkdp/hyperfine): benchmark any program.
 
