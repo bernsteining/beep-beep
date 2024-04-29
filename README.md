@@ -292,6 +292,8 @@ ______________________________________________________________________
 
 [ruff](https://github.com/astral-sh/ruff): fastest python linter & code formatter.
 
+[uv](https://astral.sh/blog/uv): pip install everything in a second.
+
 Never mix your git identities anymore
 
 ```
