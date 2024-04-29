@@ -316,6 +316,8 @@ code projects under:
 - perso/\* will be committed with your `.gitconfig-personal` identity
 - work/\* will be committed with your `.gitconfig-professional` identity
 
+[chezmoi](https://github.com/twpayne/chezmoi): manage and sync your dotfiles.
+
 ## manage your screen monitors
 
 ______________________________________________________________________
