@@ -78,6 +78,19 @@ function fp() {
 
 ```
 
+fuzzy select a wifi access point from a scan.
+
+```sh
+function wifi(){
+    iwctl station wlp0s20f3 connect \
+  $(iwctl station wlp0s20f3 scan && \
+    iwctl station wlp0s20f3 get-networks | tail +5 \
+    | fzf --ansi \
+    --layout reverse \
+    --bind 'enter:become(echo {1})')
+}
+```
+
 [ripgrep](https://github.com/BurntSushi/ripgrep): find patterns in files.
 
 [fd](https://github.com/sharkdp/fd): find directories & files.
