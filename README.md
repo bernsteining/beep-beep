@@ -91,6 +91,15 @@ function wifi(){
 }
 ```
 
+fuzzy select a paired bluetooth device
+
+```sh
+function blue(){
+  bluetoothctl connect \
+  $(bluetoothctl devices | fzf --bind 'enter:become(echo {2})')
+}
+```
+
 [ripgrep](https://github.com/BurntSushi/ripgrep): find patterns in files.
 
 [fd](https://github.com/sharkdp/fd): find directories & files.
