@@ -294,6 +294,8 @@ ______________________________________________________________________
 
 [xournalpp](https://github.com/xournalpp/xournalpp): note taking & pdf editor you're looking for.
 
+[pdftk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/): extract, merge, split and rotate pdfs from the command line.
+
 ## code related
 
 ______________________________________________________________________
