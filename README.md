@@ -230,9 +230,9 @@ ______________________________________________________________________
 
 [fq](https://github.com/wader/fq): parse binary formats.
 
-[gron](https://github.com/tomnomnom/gron): easily find the `jq` select syntax you're looking for.
+[gron](https://github.com/tomnomnom/gron) / [fastgron](https://github.com/adamritter/fastgron): easily find the `jq` select syntax you're looking for.
 
-[fx](https://github.com/antonmedv/fx): interactive `.json` traversal & finder.
+[jless](https://github.com/PaulJuliusMartinez/jless) / [fx](https://github.com/antonmedv/fx): interactive `.json` traversal & finder.
 
 ## markdown everything
 
