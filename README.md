@@ -353,8 +353,8 @@ ______________________________________________________________________
 
 ## get documentation
 
-[tealdeer](https://github.com/dbrgn/tealdeer) & [navi](https://github.com/denisidoro/navi): common use cases of tools / cheatsheets instead of exhaustive man pages.
-
+- [tealdeer](https://github.com/dbrgn/tealdeer) & [navi](https://github.com/denisidoro/navi): common use cases of tools / cheatsheets instead of exhaustive man pages.
+- `curl cheat.sh/<tool>` : get online cheatsheets for the tool you want.
 ## more utils
 
 [moreutils](https://joeyh.name/code/moreutils/)
