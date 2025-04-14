@@ -190,7 +190,7 @@ ______________________________________________________________________
 
 ## network
 
-[iwd](https://wiki.archlinux.org/title/iwd):  wireless daemon for Linux, lets you manage wifi from the cli.
+[iwd](https://wiki.archlinux.org/title/iwd): wireless daemon for Linux, lets you manage wifi from the cli.
 
 [nmtui](https://developer-old.gnome.org/NetworkManager/stable/nmtui.html): network manager TUI.
 
@@ -199,6 +199,8 @@ ______________________________________________________________________
 [nload](https://linux.die.net/man/1/nload) & [bandwhich](https://github.com/imsnif/bandwhich): monitor bandwidth usage.
 
 [rofi-bluetooth](https://github.com/nickclyde/rofi-bluetooth): manage & fuzzy-find bluetooth devices.
+
+[websocat](https://github.com/vi/websocat): websocket CLI client.
 
 ## type faster & spell checking
 
