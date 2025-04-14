@@ -224,7 +224,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-[jq](https://github.com/stedolan/jq) / [yq](https://github.com/kislyuk/yq) / [xq](https://github.com/jeffbr13/xq): parse & switch between JSON / YAML / XLM seamlessly.
+[jq](https://github.com/stedolan/jq) / [yq](https://github.com/kislyuk/yq) / [xq](https://github.com/jeffbr13/xq) / [htmlq](https://github.com/mgdm/htmlq): parse & switch between JSON / YAML / XLM / HTML seamlessly.
 
 [rq](https://github.com/dflemstr/rq): parse switch & between JSON / protobuff / TOML / msgpack / \[...\] / seamlessly.
 
